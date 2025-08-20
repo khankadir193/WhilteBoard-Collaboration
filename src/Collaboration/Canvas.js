@@ -1,16 +1,7 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 
-const Canvas = () => {
-  const canvasRef = useRef(null);
+const Canvas = ({ color, brushSize, tool, canvasRef }) => {
   const [drawing, setDrawing] = useState(false);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    ctx.lineCap = "round";
-    ctx.lineWidth = 4;
-    ctx.strokeStyle = "black";
-  }, []);
 
   const startDrawing = ({ nativeEvent }) => {
     const ctx = canvasRef.current.getContext("2d");
@@ -22,24 +13,24 @@ const Canvas = () => {
   const draw = ({ nativeEvent }) => {
     if (!drawing) return;
     const ctx = canvasRef.current.getContext("2d");
+    ctx.lineWidth = brushSize;
+    ctx.strokeStyle = tool === "eraser" ? "#ffffff" : color;
     ctx.lineTo(nativeEvent.offsetX, nativeEvent.offsetY);
     ctx.stroke();
   };
 
-  const stopDrawing = () => {
-    setDrawing(false);
-  };
+  const stopDrawing = () => setDrawing(false);
 
   return (
     <canvas
       ref={canvasRef}
-      width={1400}
+      width={800}
       height={600}
       onMouseDown={startDrawing}
       onMouseMove={draw}
       onMouseUp={stopDrawing}
       onMouseLeave={stopDrawing}
-      style={{ border: "1px solid #ccc", backgroundColor: "#fff",marginTop:'2rem' }}
+      style={{ border: "1px solid #ccc", backgroundColor: "#fff" }}
     />
   );
 };
