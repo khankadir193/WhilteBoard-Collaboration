@@ -7,7 +7,7 @@ import Toolbar from './Collaboration/Toolbar';
 function App() {
   const canvasRef = useRef(null);
   const [color, setColor] = useState("#000000");
-  const [brusshSize, setBrushSize] = useState();
+  const [brusshSize, setBrushSize] = useState(0);
   const [tool, setTool] = useState();
 
   const clearCanvas = () => {
@@ -32,6 +32,7 @@ function App() {
         setTool={setTool}
         clearCanvas={clearCanvas}
         downloadCanvas={downloadCanvas}
+        setBrushSize={setBrushSize}
       />
       <Canvas
         color={color}
