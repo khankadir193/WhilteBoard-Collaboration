@@ -30,6 +30,22 @@
     height: 5vh;
 }
 
+.undo{
+    background-image: url('../assets/undo.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 3vw;
+    height: 5vh;
+}
+
+.redo{
+    background-image: url('../assets/redo.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 3vw;
+    height: 5vh;
+}
+
 button{
     border: none;
     background: none;

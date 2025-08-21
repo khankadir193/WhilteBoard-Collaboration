@@ -14,8 +14,8 @@ const Toolbar = ({ color, setColor, brushSize, setBrushSize, setTool, clearCanva
       <button className="eraser" onClick={() => setTool("eraser")}></button>
       <button className="clear" onClick={clearCanvas}></button>
       <button className="download" onClick={downloadCanvas}></button>
-      <button onClick={handleUndo}>Undo</button>
-      <button onClick={handleRedo}>Redo</button>
+      <button className="undo" onClick={handleUndo}></button>
+      <button className="redo" onClick={handleRedo}></button>
     </div>
   );
 };
