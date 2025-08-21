@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Collab.css';
 
 const Canvas = ({ color, brushSize, tool, canvasRef }) => {
   const [drawing, setDrawing] = useState(false);
@@ -24,7 +25,7 @@ const Canvas = ({ color, brushSize, tool, canvasRef }) => {
   return (
     <canvas
       ref={canvasRef}
-      width={800}
+      width={1500}
       height={600}
       onMouseDown={startDrawing}
       onMouseMove={draw}
