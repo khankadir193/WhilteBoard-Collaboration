@@ -1,4 +1,5 @@
 import React from "react";
+import './Toolbar.css'
 
 const Toolbar = ({ color, setColor, brushSize, setBrushSize, setTool, clearCanvas, downloadCanvas }) => {
   return (
@@ -9,10 +10,10 @@ const Toolbar = ({ color, setColor, brushSize, setBrushSize, setTool, clearCanva
       🖌️ Size:
       <input type="range" min="1" max="20" value={brushSize} onChange={(e) => setBrushSize(e.target.value)} />
 
-      <button onClick={() => setTool("brush")}>Brush</button>
-      <button onClick={() => setTool("eraser")}>Eraser</button>
-      <button onClick={clearCanvas}>Clear</button>
-      <button onClick={downloadCanvas}>Download</button>
+      <button className="brush" onClick={() => setTool("brush")}></button>
+      <button className="eraser" onClick={() => setTool("eraser")}></button>
+      <button className="clear" onClick={clearCanvas}></button>
+      <button className="download" onClick={downloadCanvas}></button>
     </div>
   );
 };

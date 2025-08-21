@@ -1,0 +1,37 @@
+.brush{
+    background-image: url('../assets/paint-brush.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 3vw;
+    height: 5vh;
+}
+
+.eraser{
+    background-image: url('../assets/eraser.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 3vw;
+    height: 5vh;
+}
+
+.clear{
+    background-image: url('../assets/clear.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 3vw;
+    height: 5vh;
+}
+
+.download{
+    background-image: url('../assets/download.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 3vw;
+    height: 5vh;
+}
+
+button{
+    border: none;
+    background: none;
+    outline: none;
+}
